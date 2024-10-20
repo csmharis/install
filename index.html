@@ -18,6 +18,30 @@
       color: red;
     }
   </style>
+  <script>
+    // Function to check the link and redirect if necessary
+    function checkAndRedirect(event) {
+      // Prevent the default link behavior
+      event.preventDefault();
+  
+      // Get the href attribute of the clicked link
+      var targetUrl = event.target.href;
+  
+      // Check if the href is the specific URL we're looking for
+      if (targetUrl === 'https://csmharis.github.io/') {
+        // Redirect to Google
+        window.location.href = 'https://google.com';
+      } else {
+        // If the URL does not match, proceed as normal
+        window.location.href = targetUrl;
+      }
+    }
+  
+    // Attach the event listener to all link elements on the page
+    document.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', checkAndRedirect);
+    });
+  </script>
 </head>
 <body>
   <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
@@ -164,12 +188,16 @@ This will open a market place of different type of extensions. you need to searc
       </google-codelab-step>
     
   </google-codelab>
+  
+
+
 
   <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
   <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
   <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
   <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
   <script src="//support.google.com/inapp/api.js"></script>
+ 
 
 </body>
 </html>
