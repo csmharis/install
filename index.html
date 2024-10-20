@@ -28,6 +28,7 @@
                   feedback-link="">
     
       <google-codelab-step label="Introduction" duration="1">
+        <p><b>Hello Everyone I am Muhammad Haris, PhD student in faculty of Computing UTM</b></p>
         <p>This guide will walk you through how to setup Visual Studio Code for C++ Programming. You will be installing the followings:</p>
 <ul>
 <li>MS Visual Studio Code (the source code editor)</li>
@@ -36,8 +37,7 @@
 <li>MinGW (Compiling and debugging tools, i.e., gcc / g++ and gdb). Note that, it is pre-built with 32-bit version only. The pre-built compiler supports up to C++ 17.</li>
 <li><a href="https://home.cs.colorado.edu/~main/bgi/doc/" target="_blank">WinBGIm</a>, a simple 2D graphic library.</li>
 </ul>
-<h2 is-upgraded>Video</h2>
-<p>You can watch the video following this codelab on yoututbe. Click on this <a href="https://youtu.be/J0U8e3NYHw8" target="_blank">video link</a>.</p>
+
 
 
       </google-codelab-step>
@@ -58,17 +58,16 @@
 <li>Launch VS Code</li>
 <li>Once you are in VS Code, hit <strong><code>CTRL P</code></strong>  to open an input box on top of the window, and type:<pre>ext install ID
 </pre>
-where <code>ID</code> is the reference ID of the extension that you want to install.Example command: to install C/CPP extension<pre>ext install ms-vscode.cpptools
+This will open a market place of different type of extensions. you need to search the following extension and install it.
 </pre>
 </li>
 </ul>
 <h2 is-upgraded>Extenstions to install</h2>
 <ul>
-<li><img alt="VSCode-Ext" src="img\\505fc67413bfd44.jpg">  C/C++ (Microsoft), ext-id: ms-vscode.cpptools</li>
-<li><img alt="VSCode-Ext" src="img\\c80c4cdc22cb95de.png">  Live Share (Microsoft) <em>(for collaborative coding)</em> ext-id: ms-vsliveshare.vsliveshare</li>
-<li><img alt="VSCode-Ext" src="img\\c645d8494b763b08.png">  Error Lens (Alexander) <em>(Show error at coding-time)</em> ext-id: usernamehw.errorlens</li>
-<li><img alt="VSCode-Ext" src="img\\88fa97e669d441e4.png">  Colonize (vmsynkov) <em>(add semicolon)</em> ext-id: vmsynkov.colonize</li>
-<li><img alt="VSCode-Ext" src="img\\236204560d6672b1.png">  Better Comments (aaron-bond) <em>(comments with colors)</em> ext-id: aaron-bond.better-comments</li>
+<li><img alt="VSCode-Ext" src="img\\505fc67413bfd44.jpg">  C/C++ (Microsoft) </li>
+<li><img alt="VSCode-Ext" src="img\\c80c4cdc22cb95de.png">  Code Runner </li>
+<li><img alt="VSCode-Ext" src="img\\c645d8494b763b08.png">  Error Lens (Alexander) <em>(Show error at coding-time)</em> Optional</li>
+<li><img alt="VSCode-Ext" src="img\\236204560d6672b1.png">  Better Comments (aaron-bond) <em>(comments with colors)</em> Optional</li>
 </ul>
 
 
@@ -77,24 +76,24 @@ where <code>ID</code> is the reference ID of the extension that you want to inst
       <google-codelab-step label="Install MinGW" duration="5">
         <h2 is-upgraded>Download MingGW</h2>
 <ul>
-<li><a href="https://drive.google.com/file/d/14mEmxwes1sO4kzig7yqCG6ckRbD5zfZd" target="_blank">https://drive.google.com/file/d/14mEmxwes1sO4kzig7yqCG6ckRbD5zfZd</a></li>
+<li><a href="https://drive.google.com/file/d/1XEnnLSQUSNFFk3zVdKFCQ_qFnwz4ydy1/view?usp=sharing" target="_blank">Google Drive link</a></li>
 </ul>
 <aside class="special"><p><strong>Note:</strong></p>
 <ul>
 <li>This is not an installer, instead it is a pre-built or pre-compiled version of mingw.</li>
 <li>32-bit version.</li>
 <li>Supports languages up to C++17</li>
-<li>WinBGIm graphic library has already been bundled with it.</li>
-<li>Only for Windows 10.</li>
+<li>WinBGIm graphic library has already been bundled with it. (Can be used for the OOP in next semester)</li>
+<li>Only for Windows 7/8/10/11.</li>
 </ul>
 </aside>
 <ul>
-<li>Open the downlodaed zip file and extract the folder mingw (from the zip file) to <code>c:\</code> drive</li>
+<li>Open the download zip file and extract the folder mingw (from the zip file) to<font size="+2"> <code>c:\</code> </font> drive</li>
 </ul>
 <aside class="warning"><p><strong>Note:</strong></p>
 <ul>
 <li>Do not change the installation destination to another drive or directory.</li>
-<li>It must be <code>c:\mingw</code>, because the vscode configuration I made always refers to this path.</li>
+<li><b>!!! IMPORTANT !!! </b>It must be <code>c:\mingw</code>, because the vscode configuration I made always refers to this path. </li>
 </ul>
 </aside>
 
@@ -117,7 +116,7 @@ where <code>ID</code> is the reference ID of the extension that you want to inst
 <li>Inside the window <code>Edit environment variable</code>, click on the button <code>New</code> to add a new path.Type:<pre>c:\mingw\bin
 </pre>
 </li>
-<li>Move the entry (c:\mingw\bin) to the top making it the first entry</li>
+<li>Move the entry<b> (c:\mingw\bin) </b>  to the top making it the first entry</li>
 </ul>
 <p class="image-container"><img alt="mingw moved to first entry" src="img\\aa074855cafd8156.jpg"></p>
 
@@ -128,32 +127,38 @@ where <code>ID</code> is the reference ID of the extension that you want to inst
         <ul>
 <li>Download sample programs:</li>
 <li><a href="download/vscode-cpp-samples.zip" target="_blank">Sample Programs</a></li>
-<li>Extract the zip file inside the folder c:\mingw. You should have the sample programs under the folder the folder: <code>c:\mingw\vscode-cpp-samples</code></li>
+<li>Extract the zip file inside the folder to any folder and Remmember the location of file.</li>
 <li>Launch VS Code from the Start Menu</li>
-<li>In Windows Explorer, drag the folder <code>single-file-programs</code> into VS Code, (or right click the folder and click on the menu <code>Open with VS Code</code>)</li>
+<li>Lunch the VS code and open the sample code. <li>You will see play button like the below Screenshot. Click and run the program. </li>
+  <li>If this button show bug sign you need to click the small arrow on the right of bug and select <code>Run code</code> </li>
 </ul>
+<p class="image-container"><img alt="ABCS" src="img\\aa0112221.png"></p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Types of Projects" duration="1">
+      <!-- <google-codelab-step label="Types of Projects" duration="1">
         <p>When working with VS Code, you always want to work in a folder. You may have:</p>
 <ul>
 <li>a folder containing one or more programs. I call this type of program, single-file programs. That means, you write all your code in a single .cpp file for each program.  To run such a program, use the Run and Debug:  <code>"Console Program"</code> or <code>"Graphic Program"</code></li>
 <li>a folder dedicated to a program.  This configuration you want to use for your project. You structure your program in a folder and it contains all the .cpp, .hpp. To run this type of program, use the Run and Debug:  <code>"Multi-file Console Project"</code> or <code>"Multi-file Graphic Project"</code></li>
 </ul>
-<p class="image-container"><img alt="Types of run and debug" src="img\\6ca82701656a9c2a.jpg"></p>
+<p class="image-container"><img alt="Types of run and debug" src="img\\6ca82701656a9c2a.jpg"></p> -->
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Creating New Projects" duration="1">
+      <google-codelab-step label="Creating New Program" duration="1">
         <ul>
-<li>Create a new folder (in Windiows File Explorer) . Let call this folder, <code>program1</code>.</li>
-<li>Copy vscode setting folder (i.e.,  .vscode )    from any of your existing project (for example from  <code>C:\mingw\vscode-cpp-samples\single-file-program</code> ) to the new folder <code>program1</code>.</li>
-<li>Open the folder <code>program1</code>  into a VS Code instance.</li>
-<li>Now, you can proceed adding your source code files .cpp, etc.</li>
+<li>Create a new folder (in Any directory/Folder of your PC) . Let call this folder, <code>programs</code>.</li>
+<li>In VS code <code>File-> Open the folder <b>programs</b></code>  into a VS Code instance.</li>
+<li>Now, Press CTRL+N on keyboard - > Select Langauge -> Select C++</li>
+<li>A new file will be Created. Now Save this file as FirstProgram<b>.cpp</b></li>
+<li>Now, you can code and Run the program.</li>
 </ul>
+
+<B>Contact me (@classicalprofile) or Dr Jamilah (@JamilahMahmood) on Telegram if you are facing any issues. </B>
+<p><b>Muhammad Haris</b></p>
 
 
       </google-codelab-step>
